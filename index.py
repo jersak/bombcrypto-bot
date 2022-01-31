@@ -510,6 +510,7 @@ def main():
 
             if now - last["heroes"] > addRandomness(t['send_heroes_for_work'] * 60):
                 last["heroes"] = now
+                last["refresh_heroes"] = now
                 refreshHeroes()
 
             if now - last["login"] > addRandomness(t['check_for_login'] * 60):
